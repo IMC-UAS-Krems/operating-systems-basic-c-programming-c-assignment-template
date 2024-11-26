@@ -18,7 +18,7 @@ test: $(TARGET) test.c
 	$(CC) $(CFLAGS) -o test test.c
 	./$(TARGET) 5 10
 	./test
-
+all: assignment.c 
 # Rule to clean up the build files
 clean:
 	rm -f $(TARGET) test
