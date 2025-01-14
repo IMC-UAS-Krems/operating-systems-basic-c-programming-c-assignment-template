@@ -38,8 +38,8 @@ jobs:
       with:
         test-name: One arg test
         setup-command: chmod +x checkargs.sh
-        command: ./checkargs.sh "./assignment" "Incorrect usage. You provided 1 arguments.
-          The correct number of arguments is 2"
+        command: ./checkargs.sh "./assignment 1" "Incorrect usage. You provided 1
+          arguments. The correct number of arguments is 2"
         timeout: 10
         max-score: 1
     - name: Three args test
@@ -48,8 +48,8 @@ jobs:
       with:
         test-name: Three args test
         setup-command: chmod +x checkargs.sh
-        command: ./checkargs.sh "./assignment" "Incorrect usage. You provided 3 arguments.
-          The correct number of arguments is 2"
+        command: ./checkargs.sh "./assignment 1 2 3" "Incorrect usage. You provided
+          3 arguments. The correct number of arguments is 2"
         timeout: 10
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
